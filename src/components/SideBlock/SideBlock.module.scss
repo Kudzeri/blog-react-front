@@ -1,0 +1,30 @@
+.root {
+  margin-bottom: 20px;
+}
+
+.title {
+  padding: 15px 15px 0 15px;
+}
+
+/* Мобильная адаптация */
+
+@media (max-width: 768px) {
+  .root {
+    margin-bottom: 15px; /* Уменьшаем отступ снизу для планшетов */
+  }
+
+  .title {
+    padding: 10px 10px 0 10px; /* Уменьшаем отступы для заголовка */
+  }
+}
+
+@media (max-width: 480px) {
+  .root {
+    margin-bottom: 10px; /* Ещё меньше отступ снизу для смартфонов */
+  }
+
+  .title {
+    padding: 8px 8px 0 8px; /* Компактные отступы для маленьких экранов */
+    font-size: 16px; /* Уменьшаем размер шрифта для заголовка */
+  }
+}

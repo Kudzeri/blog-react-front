@@ -1,0 +1,83 @@
+.root {
+  background-color: #fff;
+  padding: 10px 0;
+  border-bottom: 1px solid #e0e0e0;
+  margin-bottom: 30px;
+}
+
+.inner {
+  display: flex;
+  justify-content: space-between;
+}
+
+.logo {
+  background-color: black;
+  color: #fff;
+  font-weight: 700;
+  line-height: 35px;
+  text-transform: uppercase;
+  letter-spacing: 0.15px;
+  border-radius: 5px;
+  padding: 0 10px;
+  text-decoration: none;
+
+  &:hover {
+    background-color: #4361ee;
+  }
+}
+
+.buttons {
+  button {
+    margin-left: 10px;
+  }
+
+  a {
+    text-decoration: none;
+  }
+}
+
+/* Мобильная адаптация */
+
+@media (max-width: 768px) {
+  .root {
+    padding: 10px;
+    margin-bottom: 20px; /* Уменьшаем отступ снизу */
+  }
+
+  .inner {
+    flex-direction: column; /* Изменяем направление на колонку для мобильных устройств */
+    align-items: center; /* Выравниваем элементы по центру */
+  }
+
+  .logo {
+    font-size: 18px; /* Уменьшаем размер шрифта логотипа для мобильных экранов */
+    line-height: 30px; /* Корректируем высоту строки */
+    padding: 5px 10px; /* Уменьшаем отступы */
+  }
+
+  .buttons {
+    margin-top: 10px; /* Добавляем отступ сверху для кнопок */
+    justify-content: center; /* Выравниваем кнопки по центру */
+
+    button {
+      margin-left: 5px; /* Уменьшаем отступ между кнопками */
+      font-size: 14px; /* Уменьшаем размер шрифта кнопок */
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .logo {
+    font-size: 16px; /* Еще меньше размер шрифта для очень маленьких экранов */
+    line-height: 25px; /* Корректируем высоту строки для маленьких экранов */
+    padding: 5px 8px; /* Уменьшаем отступы */
+  }
+
+  .buttons {
+    margin-top: 5px; /* Уменьшаем отступ сверху */
+    button {
+      font-size: 12px; /* Уменьшаем размер шрифта кнопок */
+      padding: 5px 10px; /* Уменьшаем отступы внутри кнопок */
+    }
+  }
+}

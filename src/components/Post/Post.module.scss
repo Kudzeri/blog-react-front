@@ -1,0 +1,232 @@
+$blue: #4361ee;
+
+.root {
+  background-color: #fff;
+  border: 1px solid #dedede;
+  border-radius: 6px;
+  overflow: hidden;
+  margin-bottom: 15px;
+  position: relative;
+
+  &:hover {
+    border: 1px solid $blue;
+    box-shadow: 0 0 0 1px $blue;
+
+    .editButtons {
+      opacity: 1;
+    }
+  }
+
+  &Full {
+    &:hover {
+      background-color: #fff;
+      border: 1px solid #dedede;
+      box-shadow: none;
+    }
+  }
+}
+
+.image {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+
+  &Full {
+    min-height: 300px;
+    height: 100%;
+  }
+}
+
+.wrapper {
+  padding: 10px 20px 20px;
+}
+
+.content {
+  margin: 30px 0 50px;
+
+  p {
+    font-size: 22px;
+    line-height: 36px;
+  }
+}
+
+.indention {
+  padding-left: 40px;
+}
+
+.title {
+  font-size: 28px;
+  margin: 0;
+
+  a {
+    text-decoration: none;
+    color: #000;
+
+    &:hover {
+      color: $blue;
+    }
+  }
+
+  &Full {
+    font-size: 42px;
+    font-weight: 900;
+  }
+}
+
+.tags {
+  list-style: none;
+  padding: 0;
+  margin: 5px 0 0 0;
+
+  li {
+    display: inline-block;
+    font-size: 14px;
+    margin-right: 15px;
+    opacity: 0.5;
+
+    &:hover {
+      opacity: 1;
+    }
+
+    a {
+      text-decoration: none;
+      color: #000;
+    }
+  }
+}
+
+.postDetails {
+  list-style: none;
+  padding: 0;
+  margin: 20px 0 0 0;
+
+  li {
+    display: inline-flex;
+    align-items: center;
+    font-size: 14px;
+    margin-right: 20px;
+    opacity: 0.5;
+
+    svg {
+      font-size: 18px;
+      margin-right: 5px;
+    }
+  }
+}
+
+.skeleton {
+  background-color: #fff;
+  border: 1px solid #dedede;
+  border-radius: 6px;
+  overflow: hidden;
+  margin-bottom: 15px;
+
+  &Content {
+    padding: 20px;
+  }
+
+  &Info {
+    margin-left: 50px;
+  }
+}
+
+.skeletonUser {
+  display: flex;
+
+  &Details {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+.skeletonTags {
+  display: flex;
+
+  span {
+    margin-right: 15px;
+  }
+}
+
+.editButtons {
+  position: absolute;
+  right: 15px;
+  top: 15px;
+  background-color: rgba(255, 255, 255, 1);
+  border-radius: 10px;
+  opacity: 0;
+  transition: all 0.15s ease-in-out;
+}
+
+/* Мобильная адаптация */
+
+@media (max-width: 768px) {
+  .root {
+    margin-bottom: 10px;
+  }
+
+  .image {
+    height: 200px; /* Уменьшаем высоту изображений */
+  }
+
+  .wrapper {
+    padding: 10px;
+  }
+
+  .content {
+    margin: 20px 0 30px;
+
+    p {
+      font-size: 18px; /* Уменьшаем размер шрифта для текста */
+      line-height: 28px;
+    }
+  }
+
+  .title {
+    font-size: 24px; /* Уменьшаем размер заголовка */
+  }
+
+  .tags li {
+    font-size: 12px; /* Уменьшаем размер шрифта для тегов */
+    margin-right: 10px;
+  }
+
+  .postDetails li {
+    font-size: 12px; /* Уменьшаем размер шрифта для деталей */
+  }
+
+  .skeletonContent {
+    padding: 15px; /* Уменьшаем отступы для скелетонов */
+  }
+
+  .skeletonUser {
+    flex-direction: column; /* Для мобильных устройств скелетоны с пользователями будут вертикальными */
+  }
+}
+
+@media (max-width: 480px) {
+  .title {
+    font-size: 20px; /* Еще меньше размер заголовка для маленьких экранов */
+  }
+
+  .content {
+    margin: 15px 0 20px;
+
+    p {
+      font-size: 16px; /* Еще уменьшение шрифта текста */
+      line-height: 24px;
+    }
+  }
+
+  .tags li {
+    font-size: 10px; /* Для очень маленьких экранов уменьшение шрифта тегов */
+    margin-right: 5px;
+  }
+
+  .image {
+    height: 180px; /* Уменьшаем размер изображения для маленьких экранов */
+  }
+
+  .postDetails li {
+    font-size: 10px; /* Уменьшаем шрифт для деталей */
+  }
+}

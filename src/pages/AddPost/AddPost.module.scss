@@ -1,0 +1,109 @@
+.title {
+  input {
+    font-size: 42px;
+    font-weight: 900;
+  }
+
+  div {
+    &:before,
+    &:after {
+      display: none;
+    }
+  }
+}
+
+.image {
+  width: 100%;
+}
+
+.tags {
+  margin: 15px 0;
+}
+
+.editor {
+  margin: 30px -30px;
+
+  :global {
+    .cm-s-easymde {
+      border: 0;
+      font-size: 22px;
+    }
+    .editor-toolbar {
+      border: 0;
+      background-color: rgb(0 0 0 / 2%);
+    }
+  }
+}
+
+.buttons {
+  display: flex;
+
+  button {
+    margin-right: 15px;
+  }
+}
+
+/* Мобильная адаптация */
+
+@media (max-width: 768px) {
+  .title {
+    input {
+      font-size: 32px; /* Уменьшаем размер шрифта заголовка */
+    }
+  }
+
+  .tags {
+    margin: 10px 0; /* Уменьшаем отступы */
+  }
+
+  .editor {
+    margin: 20px -20px; /* Уменьшаем внешние отступы редактора */
+
+    :global {
+      .cm-s-easymde {
+        font-size: 18px; /* Уменьшаем размер шрифта в редакторе */
+      }
+      .editor-toolbar {
+        background-color: rgb(0 0 0 / 5%); /* Немного увеличиваем непрозрачность */
+      }
+    }
+  }
+
+  .buttons {
+    flex-direction: column; /* Переключаем на вертикальное расположение кнопок */
+    button {
+      margin-right: 0; /* Убираем правый отступ */
+      margin-bottom: 10px; /* Добавляем нижний отступ */
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .title {
+    input {
+      font-size: 24px; /* Ещё меньше размер шрифта для заголовка */
+    }
+  }
+
+  .tags {
+    margin: 8px 0; /* Ещё меньше отступов */
+  }
+
+  .editor {
+    margin: 15px -15px; /* Ещё компактнее внешние отступы */
+
+    :global {
+      .cm-s-easymde {
+        font-size: 16px; /* Ещё меньше размер шрифта в редакторе */
+      }
+    }
+  }
+
+  .buttons {
+    flex-direction: column;
+    button {
+      font-size: 14px; /* Уменьшаем размер текста в кнопках */
+      padding: 8px; /* Уменьшаем внутренние отступы кнопок */
+    }
+  }
+}

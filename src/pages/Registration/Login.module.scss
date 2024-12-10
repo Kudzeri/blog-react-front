@@ -1,0 +1,66 @@
+.root {
+  width: 400px;
+  padding: 50px;
+  border: 1px solid #dedede;
+  margin: 50px auto;
+}
+
+.field {
+  margin-bottom: 20px !important;
+}
+
+.title {
+  text-align: center !important;
+  font-weight: bold !important;
+  margin-bottom: 30px !important;
+}
+
+.avatar {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 30px;
+}
+
+/* Мобильная адаптация */
+
+@media (max-width: 768px) {
+  .root {
+    width: 90%; /* Блок занимает 90% ширины экрана */
+    padding: 30px; /* Уменьшаем внутренние отступы */
+    margin: 30px auto; /* Уменьшаем внешний отступ сверху и снизу */
+  }
+
+  .title {
+    font-size: 20px; /* Уменьшаем размер шрифта заголовка */
+    margin-bottom: 20px !important; /* Уменьшаем нижний отступ */
+  }
+
+  .field {
+    margin-bottom: 15px !important; /* Уменьшаем отступы между полями */
+  }
+
+  .avatar {
+    margin-bottom: 20px; /* Уменьшаем нижний отступ для аватара */
+  }
+}
+
+@media (max-width: 480px) {
+  .root {
+    width: 100%; /* Блок занимает всю ширину экрана */
+    padding: 20px; /* Ещё меньше внутренние отступы */
+    margin: 20px auto; /* Минимальные внешние отступы */
+  }
+
+  .title {
+    font-size: 18px; /* Ещё меньше размер шрифта заголовка */
+    margin-bottom: 15px !important; /* Уменьшаем нижний отступ */
+  }
+
+  .field {
+    margin-bottom: 10px !important; /* Минимальные отступы между полями */
+  }
+
+  .avatar {
+    margin-bottom: 15px; /* Уменьшаем нижний отступ для аватара */
+  }
+}
