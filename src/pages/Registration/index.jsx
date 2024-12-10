@@ -29,16 +29,19 @@ export const Registration = () => {
   });
 
   const onSubmit = async (values) => {
-    const data = await dispatch(fetchUserRegister(values));
+    const { payload, error } = await dispatch(fetchUserRegister(values));
 
-    if (!data.payload) {
-      alert("Не удалось зарегестрироваться!");
+    if (error) {
+      alert("Не удалось зарегистрироваться!");
+      return;
     }
 
-    if ("token" in data.payload) {
-      window.localStorage.setItem("token", data.payload.token);
+    if (payload && "token" in payload) {
+      window.localStorage.setItem("token", payload.token);
+      return <Navigate to="/" />; // редирект на главную страницу
     }
   };
+
   if (window.localStorage.getItem("token") && isAuth) {
     return <Navigate to="/" />;
   }
