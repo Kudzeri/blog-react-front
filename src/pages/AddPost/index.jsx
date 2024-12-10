@@ -21,8 +21,7 @@ export const AddPost = () => {
   const [title, setTitle] = React.useState("");
   const [tags, setTags] = React.useState("");
   const inputFileRef = React.useRef("");
-  const isEdditing = Boolean(postSlug)
-
+  const isEdditing = Boolean(postSlug);
 
   const handleChangeFile = async (e) => {
     try {
@@ -105,7 +104,9 @@ export const AddPost = () => {
       navigate(`/posts/${data.slug}`);
     } catch (err) {
       console.warn(err);
-      alert(isEdditing ? "Не удалось обновить пост" : "Не удалось создать пост");
+      alert(
+        isEdditing ? "Не удалось обновить пост" : "Не удалось создать пост"
+      );
     } finally {
       setIsLoading(false);
     }
@@ -139,7 +140,7 @@ export const AddPost = () => {
 
           <img
             className={styles.image}
-            src={`http://localhost:4444${imageUrl}`}
+            src={`https://blog-nodejs-api.onrender.com${imageUrl}`}
             alt="Uploaded"
           />
         </>
